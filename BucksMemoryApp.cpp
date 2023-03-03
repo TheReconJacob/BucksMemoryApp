@@ -13,15 +13,22 @@ private:
 	int size;
 public:
 	AIManager(int size) :size(size) {
+		if(size > 0)
 		npcs = new NPC * [size];
 		count = 0;
 	}
 	int Add(int id) {
-		NPC* temp = new NPC(id);
-		for (int n = 0; n < count; n++)
-			if (npcs[n]->id == id) return 0;
-		npcs[count++] = temp;
-		return id;
+		if(count < size)
+		{
+			NPC* temp = new NPC(id);
+			for (int n = 0; n < count; n++)
+				if (npcs[n]->id == id && id) return 0;
+			if (id != 0)
+			{
+				npcs[count++] = temp;
+			}
+			return id;
+		}
 	}
 	void Display() {
 		for (int n = 0; n < count; n++)
@@ -34,6 +41,7 @@ public:
 };
 int main() {
 	AIManager* ai = new AIManager(10);
+	ai->Add(0);
 	ai->Add(1);
 	ai->Add(2);
 	ai->Add(3);

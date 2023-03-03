@@ -1,2 +1,3 @@
 ﻿  BucksMemoryApp.cpp
+C:\Users\jvt05\Documents\BucksMemoryApp\BucksMemoryApp.cpp(32): warning C4715: 'AIManager::Add': not all control paths return a value
   BucksMemoryApp.vcxproj -> C:\Users\jvt05\Documents\BucksMemoryApp\Debug\BucksMemoryApp.exe
